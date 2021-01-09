@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from 'prop-types';
+
 
 export default function ImageGalleryItem({imgUrl, largeImgUrl, onOpenModal}) {
   return (
@@ -7,7 +9,10 @@ export default function ImageGalleryItem({imgUrl, largeImgUrl, onOpenModal}) {
     </li>
   );
 }
-// ImageGalleryItem.propTypes = {
-//   imgUrl: PropTypes.string.isRequried,
-//   largeimgUrl: PropTypes.string.isRequried,
-// };
+
+
+
+ImageGalleryItem.propTypes = {
+  largeImgUrl: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+};

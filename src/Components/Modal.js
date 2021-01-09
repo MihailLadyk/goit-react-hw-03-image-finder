@@ -1,6 +1,14 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
+
 
 export default class Modal extends Component {
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    onClose: PropTypes.func.isRequired,
+  };
+
+
   componentDidMount() {
     window.addEventListener("keydown", this.closeModalByKey);
   }
